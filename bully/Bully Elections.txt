@@ -1,0 +1,10 @@
+Bully Election Algorithm:
+		Initialization:
+	•	Each process is assigned a unique identifier.
+	•	Initially, all processes are in the passive state.
+		Election Start:
+	•	When a process detects the failure of the coordinator (or if it wants to elect a new coordinator), it starts the election process.
+		Sending Election Messages:
+	•	The process sends an election message with its own identifier to all processes with higher identifiers.
+	•	If a process receives an election message, it responds with an "OK" message if it has a higher identifier.
+	•	If a process does not receive any response within a timeout period, it assumes itself as the coordinator.
